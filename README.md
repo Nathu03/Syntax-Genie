@@ -1,6 +1,7 @@
 # Syntax-Genie
 
-
+Username - Narthanan.s@yahoo.com
+password - Narthanan
 
 Technical Questions
 
@@ -8,7 +9,7 @@ Part 1: Code Review and Refactoring (30%)
 
 Task 1 
 
-To identify a certain function, I usually use CodeIgniter code in the application in config folder and then the php code to check the base URL which then leads to routes.php file and in there we get the file URL and controller and functions so we can easily find out. But in this existing system, the application folder path with page-based method routing is used so it’s harder to identify the function and to implement new.
+To identify a certain function, I usually use CodeIgniter code in the application in the config folder and then the PHP code to check the base URL which then leads to the routes.php file there we get the file URL and controller, functions so we can easily find out. But in this existing system, the application folder path with page-based method routing is used so it’s harder to identify the function and to implement new.
 
 Part 3: Theoretical Knowledge and Best Practices (10%)
 
@@ -37,7 +38,7 @@ PHP best Practices
 
 •	Employ Careful Typing: Use the declare(strict_types=1); declaration at the start of your files to enforce strict typing and detect type-related issues early.
 
-•	Types of Leverage Unions: Use union types to give function and method argument types of greater flexibility.
+•	Types of Leverage Unions: Use union types to give function and method argument types greater flexibility.
 
 •	Use Identified Arguments: When calling functions, especially those with numerous parameters, use named arguments to make the code easier to read.
 Understanding of MVC architecture.
@@ -67,7 +68,7 @@ Web security principles relevant to PHP applications
 •	Parameterized Statements and Prepared Statements: To stop SQL injection attacks, utilize prepared statements or parameterized statements to keep SQL code and user input apart.
 
  
-•	Preventing Cross-Site Scripting (XSS): Get rid of and clean up output data to stop XSS attacks. When displaying user-generated content, make use of functions such as htmlspecialchars().
+•	Preventing Cross-Site Scripting (XSS): Get rid of and clean up output data to stop XSS attacks. When displaying user-generated content, make use of functions such as HTML specialchars().
 
 •	Cross-Site Request Forgery (CSRF) Protection: Use anti-CSRF tokens to verify and make sure that requests are authentic, safeguarding against unwanted activities brought about by faked requests.
 
@@ -76,7 +77,7 @@ Web security principles relevant to PHP applications
 
 Strategies for optimizing PHP applications for performance.
 
-•	Code profiling: Use profiling tools such as Xdebug to examine code execution times and memory utilization in order to pinpoint bottlenecks.
+•	Code profiling: Use profiling tools such as Xdebug to examine code execution times and memory utilization to pinpoint bottlenecks.
 
 •	Mechanisms of Caching: Use opcode caching, such as OPCache, to cache precompiled script bytecode and eliminate the need to parse the script for each request.
 
