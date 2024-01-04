@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 19, 2023 at 01:13 AM
--- Server version: 8.2.0
--- PHP Version: 7.4.33
+-- Generation Time: Jan 04, 2024 at 08:15 AM
+-- Server version: 8.0.21
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,16 +30,16 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `academic_syllabus`;
 CREATE TABLE IF NOT EXISTS `academic_syllabus` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `academic_syllabus_code` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `academic_syllabus_code` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `class_id` int NOT NULL,
   `subject_id` int NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `uploader_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `uploader_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `session` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `uploader_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `uploader_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `session` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -52,26 +52,26 @@ CREATE TABLE IF NOT EXISTS `academic_syllabus` (
 DROP TABLE IF EXISTS `accountant`;
 CREATE TABLE IF NOT EXISTS `accountant` (
   `accountant_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `accountant_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `facebook` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `twitter` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `googleplus` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `linkedin` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `qualification` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `accountant_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `twitter` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `googleplus` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `linkedin` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `qualification` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`accountant_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `accountant`
@@ -89,12 +89,12 @@ INSERT INTO `accountant` (`accountant_id`, `name`, `accountant_number`, `birthda
 DROP TABLE IF EXISTS `activity`;
 CREATE TABLE IF NOT EXISTS `activity` (
   `activity_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `colour` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `icon` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `colour` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `icon` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `club_id` int NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`activity_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -107,14 +107,21 @@ CREATE TABLE IF NOT EXISTS `activity` (
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `admin_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `level` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `level` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `name`, `email`, `phone`, `password`, `level`, `login_status`) VALUES
+(12, 'Narthanan', 'narthanan.s@yahoo.com', '1234567890', 'afd69aa9ef5db532e31d23ea495ec8822d292871', 'admin', '1');
 
 -- --------------------------------------------------------
 
@@ -143,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `admin_role` (
 
 INSERT INTO `admin_role` (`admin_role_id`, `admin_id`, `dashboard`, `manage_academics`, `manage_employee`, `manage_student`, `manage_attendance`, `download_page`, `manage_parent`, `manage_alumni`) VALUES
 (4, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-(7, 9, 1, 1, 1, 1, 1, 1, 1, 1);
+(7, 12, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -154,25 +161,26 @@ INSERT INTO `admin_role` (`admin_role_id`, `admin_id`, `dashboard`, `manage_acad
 DROP TABLE IF EXISTS `alumni`;
 CREATE TABLE IF NOT EXISTS `alumni` (
   `alumni_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `profession` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `g_year` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `profession` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `g_year` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `club_id` int NOT NULL,
-  `interest` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `interest` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`alumni_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `alumni`
 --
 
 INSERT INTO `alumni` (`alumni_id`, `name`, `sex`, `phone`, `email`, `address`, `profession`, `marital_status`, `g_year`, `club_id`, `interest`) VALUES
-(4, 'Alumni Learner', 'Male', '09066021052', 'd@d.com', 'Address', 'Engineer', 'married', '2019-09-04', 1, 'Reading');
+(4, 'Alumni Learner', 'Male', '09066021052', 'd@d.com', 'Address', 'Engineer', 'married', '2019-09-04', 1, 'Reading'),
+(5, 'Narthanan Sivarajah', 'male', '+94771370356', 'narthanan.s@yahoo.com', 'Hp Road, Velikkulam, Vavuniya, Sri Lanka', 'developer', 'single ', '2024', 45, 'Reading');
 
 -- --------------------------------------------------------
 
@@ -183,10 +191,10 @@ INSERT INTO `alumni` (`alumni_id`, `name`, `sex`, `phone`, `email`, `address`, `
 DROP TABLE IF EXISTS `application`;
 CREATE TABLE IF NOT EXISTS `application` (
   `application_id` int NOT NULL AUTO_INCREMENT,
-  `applicant_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `applicant_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `vacancy_id` int NOT NULL,
-  `apply_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `apply_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`application_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -206,14 +214,14 @@ INSERT INTO `application` (`application_id`, `applicant_name`, `vacancy_id`, `ap
 DROP TABLE IF EXISTS `assignment`;
 CREATE TABLE IF NOT EXISTS `assignment` (
   `assignment_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `subject_id` int NOT NULL,
   `class_id` int NOT NULL,
   `teacher_id` int NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `timestamp` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `timestamp` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`assignment_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -236,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `attendance` (
   `status` int NOT NULL COMMENT '0 undefined , 1 present , 2  absent, 3 holiday, 4 half day, 5 late',
   `student_id` int NOT NULL,
   `date` date NOT NULL,
-  `session` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `session` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`attendance_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
@@ -257,10 +265,10 @@ INSERT INTO `attendance` (`attendance_id`, `status`, `student_id`, `date`, `sess
 DROP TABLE IF EXISTS `bank`;
 CREATE TABLE IF NOT EXISTS `bank` (
   `bank_id` int NOT NULL AUTO_INCREMENT,
-  `account_holder_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `account_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `bank_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `branch` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `account_holder_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `account_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `bank_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `branch` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`bank_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -282,10 +290,10 @@ INSERT INTO `bank` (`bank_id`, `account_holder_name`, `account_number`, `bank_na
 DROP TABLE IF EXISTS `circular`;
 CREATE TABLE IF NOT EXISTS `circular` (
   `circular_id` int NOT NULL AUTO_INCREMENT,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `reference` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `content` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `reference` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`circular_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -304,13 +312,13 @@ INSERT INTO `circular` (`circular_id`, `title`, `reference`, `content`, `date`) 
 
 DROP TABLE IF EXISTS `ci_sessions`;
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
-  `id` varchar(40) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `id` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int UNSIGNED NOT NULL DEFAULT '0',
   `data` blob NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ci_sessions_timestamp` (`timestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `ci_sessions`
@@ -341,9 +349,9 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 DROP TABLE IF EXISTS `club`;
 CREATE TABLE IF NOT EXISTS `club` (
   `club_id` int NOT NULL AUTO_INCREMENT,
-  `club_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `desc` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `club_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `desc` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`club_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -363,8 +371,8 @@ INSERT INTO `club` (`club_id`, `club_name`, `desc`, `date`) VALUES
 DROP TABLE IF EXISTS `department`;
 CREATE TABLE IF NOT EXISTS `department` (
   `department_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `department_code` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `department_code` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`department_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -384,7 +392,7 @@ INSERT INTO `department` (`department_id`, `name`, `department_code`) VALUES
 DROP TABLE IF EXISTS `designation`;
 CREATE TABLE IF NOT EXISTS `designation` (
   `designation_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `department_id` int NOT NULL,
   PRIMARY KEY (`designation_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
@@ -407,13 +415,13 @@ INSERT INTO `designation` (`designation_id`, `name`, `department_id`) VALUES
 DROP TABLE IF EXISTS `enquiry`;
 CREATE TABLE IF NOT EXISTS `enquiry` (
   `enquiry_id` int NOT NULL AUTO_INCREMENT,
-  `category` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `mobile` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `purpose` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `whom_to_meet` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `content` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `category` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `mobile` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `purpose` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `whom_to_meet` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `date` timestamp NOT NULL,
   PRIMARY KEY (`enquiry_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -427,9 +435,9 @@ CREATE TABLE IF NOT EXISTS `enquiry` (
 DROP TABLE IF EXISTS `enquiry_category`;
 CREATE TABLE IF NOT EXISTS `enquiry_category` (
   `enquiry_category_id` int NOT NULL AUTO_INCREMENT,
-  `category` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `purpose` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `whom` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `category` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `purpose` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `whom` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`enquiry_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
@@ -451,9 +459,9 @@ INSERT INTO `enquiry_category` (`enquiry_category_id`, `category`, `purpose`, `w
 DROP TABLE IF EXISTS `exam`;
 CREATE TABLE IF NOT EXISTS `exam` (
   `exam_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `comment` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `timestamp` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `comment` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `timestamp` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`exam_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -473,15 +481,15 @@ INSERT INTO `exam` (`exam_id`, `name`, `comment`, `timestamp`) VALUES
 DROP TABLE IF EXISTS `exam_question`;
 CREATE TABLE IF NOT EXISTS `exam_question` (
   `exam_question_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `teacher_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `subject_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `class_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `timestamp` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `subject_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `timestamp` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`exam_question_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -494,7 +502,7 @@ CREATE TABLE IF NOT EXISTS `exam_question` (
 DROP TABLE IF EXISTS `expense_category`;
 CREATE TABLE IF NOT EXISTS `expense_category` (
   `expense_category_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`expense_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -514,26 +522,26 @@ INSERT INTO `expense_category` (`expense_category_id`, `name`) VALUES
 DROP TABLE IF EXISTS `hostel`;
 CREATE TABLE IF NOT EXISTS `hostel` (
   `hostel_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `hostel_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `facebook` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `twitter` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `googleplus` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `linkedin` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `qualification` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `hostel_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `twitter` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `googleplus` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `linkedin` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `qualification` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`hostel_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hostel`
@@ -551,8 +559,8 @@ INSERT INTO `hostel` (`hostel_id`, `name`, `hostel_number`, `birthday`, `sex`, `
 DROP TABLE IF EXISTS `hostel_category`;
 CREATE TABLE IF NOT EXISTS `hostel_category` (
   `hostel_category_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`hostel_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -573,11 +581,11 @@ INSERT INTO `hostel_category` (`hostel_category_id`, `name`, `description`) VALU
 DROP TABLE IF EXISTS `hostel_room`;
 CREATE TABLE IF NOT EXISTS `hostel_room` (
   `hostel_room_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `room_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `num_bed` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `cost_bed` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `room_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `num_bed` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `cost_bed` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`hostel_room_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -597,8 +605,8 @@ INSERT INTO `hostel_room` (`hostel_room_id`, `name`, `room_type`, `num_bed`, `co
 DROP TABLE IF EXISTS `house`;
 CREATE TABLE IF NOT EXISTS `house` (
   `house_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`house_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -618,26 +626,26 @@ INSERT INTO `house` (`house_id`, `name`, `description`) VALUES
 DROP TABLE IF EXISTS `hrm`;
 CREATE TABLE IF NOT EXISTS `hrm` (
   `hrm_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `hrm_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `facebook` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `twitter` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `googleplus` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `linkedin` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `qualification` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `hrm_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `twitter` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `googleplus` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `linkedin` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `qualification` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`hrm_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hrm`
@@ -655,18 +663,18 @@ INSERT INTO `hrm` (`hrm_id`, `name`, `hrm_number`, `birthday`, `sex`, `religion`
 DROP TABLE IF EXISTS `invoice`;
 CREATE TABLE IF NOT EXISTS `invoice` (
   `invoice_id` int NOT NULL AUTO_INCREMENT,
-  `invoice_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `invoice_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `student_id` int NOT NULL,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `amount` int NOT NULL,
   `discount` int NOT NULL,
   `amount_paid` int NOT NULL,
   `due` int NOT NULL,
-  `creation_timestamp` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `payment_method` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `creation_timestamp` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `payment_method` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `status` int NOT NULL,
-  `year` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `year` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`invoice_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -686,13 +694,13 @@ INSERT INTO `invoice` (`invoice_id`, `invoice_number`, `student_id`, `title`, `d
 DROP TABLE IF EXISTS `language`;
 CREATE TABLE IF NOT EXISTS `language` (
   `phrase_id` int NOT NULL AUTO_INCREMENT,
-  `phrase` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `english` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
-  `arabic` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
-  `french` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
-  `korea` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
+  `phrase` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `english` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `arabic` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `french` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `korea` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   PRIMARY KEY (`phrase_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40558 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=40558 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `language`
@@ -712,7 +720,7 @@ INSERT INTO `language` (`phrase_id`, `phrase`, `english`, `arabic`, `french`, `k
 DROP TABLE IF EXISTS `language_list`;
 CREATE TABLE IF NOT EXISTS `language_list` (
   `language_list_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `name` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `db_field` varchar(300) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`language_list_id`)
@@ -727,12 +735,12 @@ CREATE TABLE IF NOT EXISTS `language_list` (
 DROP TABLE IF EXISTS `leave`;
 CREATE TABLE IF NOT EXISTS `leave` (
   `leave_id` int NOT NULL AUTO_INCREMENT,
-  `leave_code` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `teacher_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `start_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `end_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `reason` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `leave_code` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `start_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `end_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `reason` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`leave_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -745,26 +753,26 @@ CREATE TABLE IF NOT EXISTS `leave` (
 DROP TABLE IF EXISTS `librarian`;
 CREATE TABLE IF NOT EXISTS `librarian` (
   `librarian_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `librarian_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `facebook` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `twitter` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `googleplus` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `linkedin` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `qualification` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `librarian_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `twitter` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `googleplus` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `linkedin` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `qualification` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`librarian_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `librarian`
@@ -811,14 +819,14 @@ INSERT INTO `mark` (`mark_id`, `student_id`, `subject_id`, `exam_id`, `class_id`
 DROP TABLE IF EXISTS `material`;
 CREATE TABLE IF NOT EXISTS `material` (
   `material_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `class_id` int NOT NULL,
   `subject_id` int NOT NULL,
   `teacher_id` int NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `timestamp` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `timestamp` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`material_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -838,10 +846,10 @@ INSERT INTO `material` (`material_id`, `name`, `class_id`, `subject_id`, `teache
 DROP TABLE IF EXISTS `noticeboard`;
 CREATE TABLE IF NOT EXISTS `noticeboard` (
   `noticeboard_id` int NOT NULL AUTO_INCREMENT,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `location` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `location` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`noticeboard_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -862,22 +870,23 @@ INSERT INTO `noticeboard` (`noticeboard_id`, `title`, `location`, `timestamp`, `
 DROP TABLE IF EXISTS `parent`;
 CREATE TABLE IF NOT EXISTS `parent` (
   `parent_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `profession` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `profession` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `parent`
 --
 
 INSERT INTO `parent` (`parent_id`, `name`, `email`, `password`, `phone`, `address`, `profession`, `login_status`) VALUES
-(4, 'Mr. Parent', 'parent@parent.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '+912345667', 'Udemy Address', 'Learners', '0');
+(4, 'Mr. Parent', 'parent@parent.com', '', '+912345667', 'Udemy Address', 'Learners', ''),
+(5, 'Narthanan Sivarajah', 'narthanan.s@yahoo.com', '12345678', '+94771370356', 'Hp Road, Velikkulam, Vavuniya, Sri Lanka', 'developer', '0');
 
 -- --------------------------------------------------------
 
@@ -888,17 +897,17 @@ INSERT INTO `parent` (`parent_id`, `name`, `email`, `password`, `phone`, `addres
 DROP TABLE IF EXISTS `payment`;
 CREATE TABLE IF NOT EXISTS `payment` (
   `payment_id` int NOT NULL AUTO_INCREMENT,
-  `expense_category_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `title` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `payment_type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `invoice_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `student_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `method` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `amount` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `discount` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `expense_category_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `payment_type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `invoice_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `student_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `method` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `amount` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `discount` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int NOT NULL,
-  `year` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `year` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`payment_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
@@ -924,8 +933,8 @@ INSERT INTO `payment` (`payment_id`, `expense_category_id`, `title`, `payment_ty
 DROP TABLE IF EXISTS `publisher`;
 CREATE TABLE IF NOT EXISTS `publisher` (
   `publisher_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`publisher_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -945,8 +954,8 @@ INSERT INTO `publisher` (`publisher_id`, `name`, `description`) VALUES
 DROP TABLE IF EXISTS `section`;
 CREATE TABLE IF NOT EXISTS `section` (
   `section_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `nick_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `nick_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `class_id` int NOT NULL,
   `teacher_id` int NOT NULL,
   PRIMARY KEY (`section_id`)
@@ -969,8 +978,8 @@ INSERT INTO `section` (`section_id`, `name`, `nick_name`, `class_id`, `teacher_i
 DROP TABLE IF EXISTS `settings`;
 CREATE TABLE IF NOT EXISTS `settings` (
   `settings_id` int NOT NULL AUTO_INCREMENT,
-  `type` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`settings_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=123 DEFAULT CHARSET=latin1;
 
@@ -979,8 +988,8 @@ CREATE TABLE IF NOT EXISTS `settings` (
 --
 
 INSERT INTO `settings` (`settings_id`, `type`, `description`) VALUES
-(1, 'system_name', 'PHP CodeIgniter School System'),
-(2, 'system_title', 'PHP CodeIgniter School System'),
+(1, 'system_name', 'Narthanan Sivarajah'),
+(2, 'system_title', 'Narthanan Sivarajah'),
 (3, 'address', '546787, Kertz shopping complext, Silicon Valley, United State of America, New York city.'),
 (4, 'phone', '+1564783934'),
 (6, 'currency', 'usd'),
@@ -1003,10 +1012,10 @@ INSERT INTO `settings` (`settings_id`, `type`, `description`) VALUES
 DROP TABLE IF EXISTS `social_category`;
 CREATE TABLE IF NOT EXISTS `social_category` (
   `social_category_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `colour` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `icon` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `colour` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `icon` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`social_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -1027,51 +1036,51 @@ INSERT INTO `social_category` (`social_category_id`, `name`, `colour`, `icon`, `
 DROP TABLE IF EXISTS `student`;
 CREATE TABLE IF NOT EXISTS `student` (
   `student_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `age` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `place_birth` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `m_tongue` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `city` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `state` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `nationality` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ps_attended` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ps_address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ps_purpose` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `class_study` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `date_of_leaving` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `am_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `tran_cert` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `dob_cert` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `mark_join` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `physical_h` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `father_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `mother_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `class_id` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `age` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `place_birth` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `m_tongue` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `city` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `state` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `nationality` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ps_attended` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ps_address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ps_purpose` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_study` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date_of_leaving` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `am_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tran_cert` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `dob_cert` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `mark_join` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `physical_h` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `father_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `mother_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_id` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `section_id` int NOT NULL,
   `parent_id` int NOT NULL,
-  `roll` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `roll` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `transport_id` int NOT NULL,
   `dormitory_id` int NOT NULL,
   `house_id` int NOT NULL,
   `student_category_id` int NOT NULL,
   `club_id` int NOT NULL,
-  `session` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `card_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `issue_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `expire_date` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `dormitory_room_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `more_entries` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `session` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `card_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `issue_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `expire_date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `dormitory_room_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `more_entries` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`student_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `student`
@@ -1089,8 +1098,8 @@ INSERT INTO `student` (`student_id`, `name`, `birthday`, `age`, `place_birth`, `
 DROP TABLE IF EXISTS `student_category`;
 CREATE TABLE IF NOT EXISTS `student_category` (
   `student_category_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`student_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -1110,34 +1119,34 @@ INSERT INTO `student_category` (`student_category_id`, `name`, `description`) VA
 DROP TABLE IF EXISTS `teacher`;
 CREATE TABLE IF NOT EXISTS `teacher` (
   `teacher_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `role` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `teacher_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `birthday` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `sex` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `religion` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `blood_group` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `facebook` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `twitter` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `googleplus` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `linkedin` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `qualification` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `marital_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `file_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `role` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `teacher_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `religion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `blood_group` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `facebook` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `twitter` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `googleplus` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `linkedin` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `qualification` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `marital_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `file_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `department_id` int NOT NULL,
   `designation_id` int NOT NULL,
-  `date_of_joining` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `joining_salary` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `date_of_joining` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `joining_salary` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `status` int NOT NULL,
-  `date_of_leaving` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `date_of_leaving` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `bank_id` int NOT NULL,
-  `login_status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `login_status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`teacher_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `teacher`
@@ -1155,16 +1164,16 @@ INSERT INTO `teacher` (`teacher_id`, `name`, `role`, `teacher_number`, `birthday
 DROP TABLE IF EXISTS `vehicle`;
 CREATE TABLE IF NOT EXISTS `vehicle` (
   `vehicle_id` int NOT NULL AUTO_INCREMENT,
-  `name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `vehicle_number` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `vehicle_model` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `vehicle_quantity` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `year_made` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `driver_name` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `driver_license` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `driver_contact` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `description` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `status` longtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `vehicle_number` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `vehicle_model` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `vehicle_quantity` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `year_made` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `driver_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `driver_license` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `driver_contact` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`vehicle_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
